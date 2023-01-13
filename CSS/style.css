@@ -31,6 +31,10 @@ ul {
     list-style-type: none;
 }
 
+img {
+    display: block;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -236,6 +240,8 @@ header {
 /* accommodations ************************************************/
 
 #accommodations {
+    display: flex;
+    flex-direction: column;
     grid-column: 1/3;
     background-color: #F2F2F2;
     padding: 2.625rem 2.5rem 2.875rem;
@@ -248,6 +254,7 @@ header {
 
 .cards {
     display: grid;
+    flex: 1;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1.875rem 1.9375rem;
@@ -283,9 +290,11 @@ header {
 /* popular *******************************************************/
 
 .popular {
+    display: flex;
+    flex-direction: column;
     grid-column: 3/4;
     background-color: #F2F2F2;
-    padding: 2.625rem 2.5rem 2.125rem 2.3125rem;
+    padding: 2.625rem 2.5rem 2.125rem;
     border-radius: 1.25rem;
 }
 
@@ -296,16 +305,9 @@ header {
 }
 
 .popular_cards {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 2.0625rem;
-}
-
-.card_flex {
-    display: flex;
     flex-direction: column;
-    gap: 0.4375rem;
-    padding: 0.6875rem 1.0625rem 0.4375rem 1.25rem;
+    flex: 1;
+    gap: 2.0625rem;
 }
 
 .popular_card .card_img {
@@ -315,16 +317,23 @@ header {
     min-width: 7.9375rem;
 }
 
-@media screen and (max-width:1262px) {
+@media screen and (min-width:992px) and (max-width:1328px) {
     .popular_card .card_img {
-        height: 9.5rem;
+        height: 8.75rem;
     }
-    
-    @media screen and (max-width:1103px) {
+
+    @media screen and (max-width:1271px) {
         .popular_card .card_img {
-            height: calc(30.125rem / 3);
+            height: 10rem;
         }
     }
+}
+
+.card_flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4375rem;
+    padding: 0.6875rem 1.0625rem 0.4375rem 1.25rem;
 }
 
 /* activities ****************************************************/
@@ -440,7 +449,6 @@ footer {
     }
 
     .popular_cards {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1.4375rem;
@@ -453,11 +461,6 @@ footer {
     .popular_card .card_link {
         box-sizing: border-box;
         height: 100%;
-    }
-
-    .card_flex {
-        gap: 0.4375rem;
-        padding: 0.4375rem 0.625rem 0.4375rem 0.9375rem;
     }
 
     @media screen and (min-width:768px) {
@@ -473,6 +476,11 @@ footer {
                 height: 8.375rem;
             }
         }
+    }
+
+    .card_flex {
+        gap: 0.4375rem;
+        padding: 0.4375rem 0.625rem 0.4375rem 0.9375rem;
     }
 
     #activities {
@@ -552,7 +560,7 @@ footer {
 
     .search_bar {
         display: flex;
-        margin : 0 0.125rem 2.125rem;
+        margin: 0 0.125rem 2.125rem;
     }
 
     .search_input {
@@ -655,7 +663,7 @@ footer {
         flex-direction: column;
         gap: 1.5rem;
     }
-    
+
     .activity_card .card_img {
         height: 8.375rem;
     }
