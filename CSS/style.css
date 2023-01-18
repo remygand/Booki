@@ -108,7 +108,7 @@ header {
     font-size: 1.125rem;
     color: black;
     background-color: #F2F2F2;
-    height: 3.0625rem;
+    height: 3.125rem;
     width: 3.125rem;
     border: 0.0625rem solid #F2F2F2;
     border-radius: 0.9375rem 0 0 0.9375rem;
@@ -129,6 +129,7 @@ header {
 
 .search_input::placeholder {
     color: black;
+    opacity: 1;
 }
 
 .search_input:focus {
