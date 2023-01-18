@@ -127,6 +127,14 @@ header {
     border: 0.0625rem solid #F2F2F2;
 }
 
+.search_input::placeholder {
+    color: black;
+}
+
+.search_input:focus {
+    outline: none;
+}
+
 .search_button {
     color: white;
     background-color: #0065FC;
